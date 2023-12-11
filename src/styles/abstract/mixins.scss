@@ -1,0 +1,64 @@
+@import "./placeholders.scss";
+
+@mixin font-h1-regular {
+  @extend %additional-font;
+  font-size: 76px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 112.5%;
+  letter-spacing: -1.52px;
+}
+
+@mixin font-h2-regular {
+  @extend %main-font;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 112.5%;
+  letter-spacing: 0.48px;
+}
+
+@mixin font-li-extraLight {
+  @extend %additional-font;
+  font-size: 136px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 100%;
+  letter-spacing: -5.44px;
+}
+
+@mixin font-body-regular {
+  @extend %main-font;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: 0.36px;
+}
+
+@mixin font-body-subtitle {
+  @extend %main-font;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: 0.4px;
+}
+
+@mixin font-nav-regular {
+  @extend %main-font;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%;
+  letter-spacing: 0.3px;
+}
+
+@mixin font-input-field {
+  @extend %main-font;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 125%;
+  letter-spacing: 0.32px;
+}
