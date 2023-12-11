@@ -1,0 +1,94 @@
+@import "../../styles/abstract/constants.scss";
+@import "../../styles/abstract/mixins.scss";
+
+.header {
+  max-width: 1472px;
+  margin: 0 auto;
+  padding: 0 50px;
+  height: 64px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 32px;
+
+  &__burger {
+    display: none;
+    padding: 10px;
+  }
+
+  &__nav {
+    @include font-nav-regular;
+    color: $white-second-text;
+    opacity: 0.9;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+  }
+
+  &__link {
+    margin-left: 244px;
+    @include font-nav-regular;
+    opacity: 0.9;
+    color: $white-second-text;
+    font-weight: 500;
+    text-decoration: none;
+  }
+
+  &__button {
+    @include font-nav-regular;
+    background-color: $white-second-text;
+    color: $black-standart;
+    font-weight: 700;
+    letter-spacing: normal;
+    height: 35px;
+    border: none;
+    border-radius: 40px;
+    display: flex;
+    place-items: center;
+    padding: 0 18px;
+  }
+
+  @media screen and (max-width: 1572px) {
+    &__link {
+      margin-left: 15.52vw;
+    }
+  }
+
+  @media screen and (max-width: 1000px) {
+    padding: 0 30px;
+    justify-content: space-between;
+
+    &__nav {
+      gap: 4vw;
+    }
+
+    &__link {
+      margin-left: auto;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    padding: 0 40px 0 30px;
+
+    &__burger {
+      display: block;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    padding: 0 15px 0 5px;
+
+    &__burger {
+      display: block;
+    }
+
+    &__nav {
+      display: none;
+    }
+  }
+}
