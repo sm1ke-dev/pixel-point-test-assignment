@@ -16,20 +16,20 @@ const Header: React.FC = () => {
         <path
           d="M2 19L20 19"
           stroke="#FAF9FA"
-          stroke-width="2.5"
-          stroke-linecap="round"
+          strokeWidth="2.5"
+          strokeLinecap="round"
         />
         <path
           d="M2 11L20 11"
           stroke="#FAF9FA"
-          stroke-width="2.5"
-          stroke-linecap="round"
+          strokeWidth="2.5"
+          strokeLinecap="round"
         />
         <path
           d="M2 3L20 3"
           stroke="#FAF9FA"
-          stroke-width="2.5"
-          stroke-linecap="round"
+          strokeWidth="2.5"
+          strokeLinecap="round"
         />
       </svg>
       <ul className={styles.header__nav}>

@@ -40,12 +40,12 @@
   }
 
   &__link {
-    margin-left: 210px;
+    margin-left: 213px;
     @include font-nav-regular;
     opacity: 0.9;
     color: $white-second-text;
     flex: 0 0 auto;
-    font-weight: 500;
+    font-weight: 400;
     text-decoration: none;
   }
 
