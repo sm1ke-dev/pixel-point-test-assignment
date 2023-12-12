@@ -1,0 +1,74 @@
+@import "../../styles/abstract/constants.scss";
+@import "../../styles/abstract/mixins.scss";
+
+.form {
+  position: relative;
+  width: 100%;
+
+  &__input {
+    @include font-input-field;
+    height: 60px;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid rgba($color: #fff, $alpha: 0.5);
+    border-radius: 40px;
+    color: #fff;
+    opacity: 0.8;
+    box-sizing: border-box;
+    padding-left: 31px;
+    padding-right: 190px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__button {
+    @include font-input-field;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 168px;
+    height: 48px;
+    border: none;
+    border-radius: 40px;
+    background-color: $accent-purple;
+    font-weight: 700;
+    letter-spacing: normal;
+    display: flex;
+    place-content: center;
+    place-items: center;
+    cursor: pointer;
+    transition: all 0.4s;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &_loading,
+    &_success,
+    &_error {
+      width: 48px;
+      cursor: default;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &_success {
+      background-color: $success-green;
+    }
+
+    &_error {
+      background-color: #cb6afb;
+    }
+  }
+
+  &__error {
+    @include font-input-field;
+    color: $error-red;
+    margin-top: 12px;
+    margin-left: 31px;
+  }
+}
