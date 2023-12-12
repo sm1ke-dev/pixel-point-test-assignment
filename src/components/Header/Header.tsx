@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Dropdown from "../Dropdown/Dropdown";
 import styles from "./Header.module.scss";
+import { MENU_ITEMS } from "../../utils/constants";
 
 const Header: React.FC = () => {
   return (
@@ -33,12 +35,21 @@ const Header: React.FC = () => {
         />
       </svg>
       <ul className={styles.header__nav}>
-        <li className={styles.header__item}>Integrations</li>
-        <li className={styles.header__item}>Core Platform</li>
-        <li className={styles.header__item}>Company</li>
-        <li className={styles.header__item}>Resources</li>
+        {MENU_ITEMS.map((item) => {
+          if (item.dropdown) {
+            return <Dropdown key={item.id} {...item} />;
+          } else {
+            return (
+              <li className={styles.header__item}>
+                <Link to={item.link} className={styles.header__link}>
+                  {item.name}
+                </Link>
+              </li>
+            );
+          }
+        })}
       </ul>
-      <Link to="#" className={styles.header__link}>
+      <Link to="#" className={styles.header__contactLink}>
         Contact Sales
       </Link>
       <button className={styles.header__button}>Book a Demo</button>

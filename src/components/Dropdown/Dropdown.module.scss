@@ -1,0 +1,69 @@
+@import "../../styles/abstract/constants.scss";
+@import "../../styles/abstract/mixins.scss";
+
+.dropdown {
+  position: relative;
+  opacity: 1;
+
+  &:after {
+    content: url("../../images/arrow.svg");
+    display: inline-block;
+    margin-left: 4px;
+    rotate: 0;
+    transition: rotate 0.2s;
+  }
+
+  &_opened {
+    &:after {
+      rotate: 180deg;
+    }
+  }
+
+  &__text {
+    @include font-nav-regular;
+    opacity: 0.9;
+    color: $white-second-text;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    opacity: 0;
+    padding: 10px;
+    background-color: $black-standart;
+    border-radius: 8px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 8px 10px 0 rgba($color: #000000, $alpha: 1);
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
+
+    &_opened {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+
+  &__link {
+    @include font-nav-regular;
+    opacity: 0.9;
+    color: $white-second-text;
+    text-decoration: none;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}

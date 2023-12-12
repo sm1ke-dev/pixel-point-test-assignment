@@ -34,3 +34,74 @@ export const FEATURES_LIST = [
       "Implement swiftly with straightforward, no-code processes and ready-to-use integrations.",
   },
 ];
+
+export const MENU_ITEMS = [
+  {
+    id: 1,
+    name: "Integrations",
+    link: "",
+  },
+  {
+    id: 2,
+    name: "Core Platform",
+    dropdown: [
+      {
+        id: 1,
+        link: "#",
+        name: "1 dropdown",
+      },
+      {
+        id: 2,
+        link: "#",
+        name: "2 dropdown",
+      },
+    ],
+  },
+  {
+    id: 3,
+    name: "Company",
+    dropdown: [
+      {
+        id: 1,
+        link: "#",
+        name: "1 dropdown",
+      },
+      {
+        id: 2,
+        link: "#",
+        name: "2 dropdown",
+      },
+      {
+        id: 3,
+        link: "#",
+        name: "3 dropdown",
+      },
+      {
+        id: 4,
+        link: "#",
+        name: "4 dropdown",
+      },
+    ],
+  },
+  {
+    id: 4,
+    name: "Resources",
+    dropdown: [
+      {
+        id: 1,
+        link: "#",
+        name: "1 dropdown",
+      },
+      {
+        id: 2,
+        link: "#",
+        name: "2 dropdown",
+      },
+      {
+        id: 3,
+        link: "#",
+        name: "3 dropdown",
+      },
+    ],
+  },
+];
