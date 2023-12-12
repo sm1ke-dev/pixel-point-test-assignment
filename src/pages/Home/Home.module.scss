@@ -1,7 +1,22 @@
+@import "../../styles/abstract/constants.scss";
+
 .main {
   max-width: 1472px;
   margin: 0 auto;
   padding: 0 50px;
+  position: relative;
+
+  &__background {
+    position: absolute;
+    top: -192px;
+    left: 50px;
+    width: 630px;
+    height: 630px;
+    border-radius: 50%;
+    opacity: 0.15;
+    background-color: $accent-purple;
+    filter: blur(200px);
+  }
 
   @media screen and (max-width: 1000px) {
     padding: 0 30px;
@@ -9,9 +24,23 @@
 
   @media screen and (max-width: 768px) {
     padding: 0 40px;
+
+    &__background {
+      top: -50px;
+      width: 360px;
+      height: 360px;
+      filter: blur(100px);
+    }
   }
 
   @media screen and (max-width: 480px) {
     padding: 0 15px;
+
+    &__background {
+      top: -50px;
+      left: 0;
+      width: 360px;
+      height: 360px;
+    }
   }
 }
