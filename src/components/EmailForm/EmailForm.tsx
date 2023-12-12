@@ -68,9 +68,9 @@ const InputEmail: React.FC = () => {
         ) : isLoading && sendStatus === "" ? (
           <Loader />
         ) : !isLoading && sendStatus === "Success" ? (
-          <img src={success} alt="success" />
+          <img src={success} alt="success" className={styles.form__icon} />
         ) : (
-          <img src={error} alt="error" />
+          <img src={error} alt="error" className={styles.form__icon} />
         )}
       </button>
       {errorMessage !== "" && (

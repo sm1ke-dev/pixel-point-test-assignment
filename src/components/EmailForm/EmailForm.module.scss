@@ -4,10 +4,11 @@
 .form {
   position: relative;
   width: 100%;
+  height: 100%;
 
   &__input {
     @include font-input-field;
-    height: 60px;
+    height: 100%;
     width: 100%;
     background-color: transparent;
     border: 1px solid rgba($color: #fff, $alpha: 0.5);
@@ -16,7 +17,7 @@
     opacity: 0.8;
     box-sizing: border-box;
     padding-left: 31px;
-    padding-right: 190px;
+    padding-right: 37.7%;
 
     &:focus {
       outline: none;
@@ -26,10 +27,12 @@
   &__button {
     @include font-input-field;
     position: absolute;
-    top: 6px;
-    right: 6px;
-    width: 168px;
-    height: 48px;
+    top: 10%;
+    right: 1.2%;
+    // top: 6px;
+    // right: 6px;
+    width: 33.3334%;
+    height: 80%;
     border: none;
     border-radius: 40px;
     background-color: $accent-purple;
@@ -48,7 +51,7 @@
     &_loading,
     &_success,
     &_error {
-      width: 48px;
+      width: 9.5%;
       cursor: default;
 
       &:hover {
@@ -70,5 +73,26 @@
     color: $error-red;
     margin-top: 12px;
     margin-left: 31px;
+  }
+
+  @media screen and (max-width: 580px) {
+    &__input {
+      font-size: 14px;
+      padding-left: 15px;
+    }
+
+    &__button {
+      font-size: 14px;
+    }
+
+    &__icon {
+      width: 14px;
+      height: 14px;
+    }
+
+    &__error {
+      font-size: 14px;
+      margin-left: 15px;
+    }
   }
 }

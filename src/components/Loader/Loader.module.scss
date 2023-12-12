@@ -19,7 +19,7 @@
 .loader {
   width: 25px;
   height: 25px;
-  border: 4px solid #bb99ff;
+  border: 3px solid #bb99ff;
   border-radius: 50%;
   position: relative;
   transform: rotate(45deg);
@@ -27,10 +27,15 @@
   &:before {
     content: "";
     position: absolute;
-    inset: -4px;
+    inset: -3px;
     border-radius: 50%;
-    border: 4px solid #fff;
+    border: 3px solid #fff;
     animation: p8 1.5s infinite linear;
     stroke-linecap: round;
+  }
+
+  @media screen and (max-width: 580px) {
+    width: 16px;
+    height: 16px;
   }
 }
