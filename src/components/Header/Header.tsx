@@ -40,7 +40,7 @@ const Header: React.FC = () => {
             return <Dropdown key={item.id} {...item} />;
           } else {
             return (
-              <li className={styles.header__item}>
+              <li className={styles.header__item} key={item.id}>
                 <Link to={item.link} className={styles.header__link}>
                   {item.name}
                 </Link>
