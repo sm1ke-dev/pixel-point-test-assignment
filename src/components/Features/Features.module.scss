@@ -1,0 +1,24 @@
+.features {
+  margin-top: 23px;
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 166px;
+  row-gap: 70px;
+  list-style: none;
+  padding: 0 0 187px;
+
+  @media screen and (max-width: 1680px) {
+    column-gap: 9.88vw;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 1388px) {
+    padding-bottom: 130px;
+    column-gap: 138px;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 580px) {
+    padding-bottom: 80px;
+  }
+}

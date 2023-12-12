@@ -1,0 +1,43 @@
+@import "../../styles/abstract/constants.scss";
+@import "../../styles/abstract/mixins.scss";
+
+.feature {
+  flex: 0 0 338px;
+  position: relative;
+
+  &__title {
+    @include font-li-extraLight;
+    background: linear-gradient(
+      133deg,
+      #d383fc 21.78%,
+      #cb6afb 39.25%,
+      rgba(203, 106, 251, 0.2) 86.85%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 14px;
+  }
+
+  &__background {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+  }
+
+  &__subtitle {
+    @include font-h2-regular;
+    color: $white-second-text;
+  }
+
+  &__line {
+    margin: 32px 0;
+    border: none;
+    border-bottom: 1px solid rgba($color: #fff, $alpha: 0.1);
+  }
+
+  &__description {
+    @include font-body-regular;
+    color: $white-standart-text;
+  }
+}

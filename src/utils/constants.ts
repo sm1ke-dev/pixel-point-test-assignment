@@ -10,3 +10,27 @@ export const EMAIL_VALIDATION = {
     tooLong: "Email is too long",
   },
 };
+
+export const FEATURES_LIST = [
+  {
+    id: 1,
+    title: "3x",
+    subtitle: "Faster Analysis Cycles",
+    description:
+      "Stop the tedium of manual subscription data review. Quickly access essential information from all subscriptions.",
+  },
+  {
+    id: 2,
+    title: "10%+",
+    subtitle: "Savings on Costs",
+    description:
+      "Insights into both subscription data and expenditure lead to rapid, smart cost-cutting strategies.",
+  },
+  {
+    id: 3,
+    title: "30",
+    subtitle: "Day Setup",
+    description:
+      "Implement swiftly with straightforward, no-code processes and ready-to-use integrations.",
+  },
+];

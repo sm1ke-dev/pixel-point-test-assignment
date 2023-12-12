@@ -28,20 +28,6 @@
     }
   }
 
-  // &__documentWrapper {
-  //   margin-top: -3px;
-  //   // flex: 1 0 744px;
-  //   // height: 965px;
-  //   position: relative;
-  // }
-
-  // &__documentBlur {
-  //   position: absolute;
-  //   top: -60px;
-  //   left: -80px;
-  //   opacity: 0.7;
-  // }
-
   &__document {
     overflow: hidden;
     position: absolute;
@@ -73,7 +59,7 @@
   }
 
   @media screen and (max-width: 1200px) {
-    padding: 50px 0 200px;
+    padding: 50px 0 130px;
 
     &__wrapper {
       max-width: 560px;
@@ -124,6 +110,8 @@
   }
 
   @media screen and (max-width: 580px) {
+    padding: 30px 0 80px;
+
     &__wrapper {
       max-width: 400px;
       margin: 0;
