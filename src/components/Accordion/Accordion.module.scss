@@ -36,14 +36,18 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
-    visibility: hidden;
     max-height: 0;
-    transition: all 0.2s;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.2s, transform 0.2s;
 
     &_opened {
-      visibility: visible;
-      height: auto;
       max-height: 1000px;
+      height: auto;
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
     }
   }
 
