@@ -2,7 +2,19 @@ import React from "react";
 import styles from "./Accordion.module.scss";
 import { Link } from "react-router-dom";
 
-const Accordion: React.FC<any> = ({
+type AccordionProps = {
+  id: number;
+  name: string;
+  dropdown: {
+    id: number;
+    link: string;
+    name: string;
+  }[];
+  selected: number;
+  onClick: (id: number) => void;
+};
+
+const Accordion: React.FC<AccordionProps> = ({
   id,
   name,
   dropdown,
@@ -26,7 +38,7 @@ const Accordion: React.FC<any> = ({
           selected === id ? styles.accordion__menu_opened : ""
         }`}
       >
-        {dropdown.map((item: any) => (
+        {dropdown.map((item: { id: number; link: string; name: string }) => (
           <Link to={item.link} key={item.id} className={styles.accordion__link}>
             {item.name}
           </Link>

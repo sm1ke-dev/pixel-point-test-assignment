@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import styles from "./MobileMenu.module.scss";
 import { MENU_ITEMS } from "../../utils/constants";
-import Dropdown from "../Dropdown/Dropdown";
 import Accordion from "../Accordion/Accordion";
 
 type MobileMenuProps = {

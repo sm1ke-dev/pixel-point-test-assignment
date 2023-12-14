@@ -3,7 +3,16 @@ import styles from "./Dropdown.module.scss";
 import { Link } from "react-router-dom";
 import { useOutsideClick } from "../../hooks/useOutsideClick";
 
-const Dropdown: React.FC<any> = ({ name, dropdown }) => {
+type DropdownProps = {
+  name: string;
+  dropdown: {
+    id: number;
+    link: string;
+    name: string;
+  }[];
+};
+
+const Dropdown: React.FC<DropdownProps> = ({ name, dropdown }) => {
   const [isActive, setIsActive] = React.useState(false);
   const ref = React.useRef(null);
 
@@ -25,7 +34,7 @@ const Dropdown: React.FC<any> = ({ name, dropdown }) => {
         }`}
         ref={ref}
       >
-        {dropdown.map((item: any) => (
+        {dropdown.map((item: { id: number; link: string; name: string }) => (
           <Link to={item.link} key={item.id} className={styles.dropdown__link}>
             {item.name}
           </Link>

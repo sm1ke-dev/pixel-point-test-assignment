@@ -1,4 +1,4 @@
-export const SEND_STATUS: "Success" | "Error" = "Error";
+export const SEND_STATUS: "Success" | "Error" = "Success";
 
 export const EMAIL_VALIDATION = {
   pattern:
