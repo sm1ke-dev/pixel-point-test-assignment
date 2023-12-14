@@ -20,6 +20,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
     setSelected(id);
   };
 
+  const handleClose = () => {
+    setSelected(0);
+    onClose(false);
+  };
+
   return (
     <div
       className={`${styles.mobileMenu} ${
@@ -29,7 +34,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
       <button
         type="button"
         className={styles.mobileMenu__button}
-        onClick={() => onClose(false)}
+        onClick={handleClose}
       >
         <span className={styles.mobileMenu__line1}></span>
         <span className={styles.mobileMenu__line2}></span>
